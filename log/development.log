@@ -6,3 +6,33 @@ Processing by ApplicationController#hello_world as HTML
 Completed 200 OK in 15ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 14219)
 
 
+Started GET "/hello" for ::1 at 2022-09-30 11:01:03 -0700
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 14ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 14224)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-09-30 11:10:39 -0700
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 340)
+
+
+Started GET "/hello" for 127.0.0.1 at 2022-09-30 11:10:39 -0700
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 335)
+
+
+Started GET "/hello" for ::1 at 2022-09-30 11:10:47 -0700
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 237)
+
+
+Started GET "/hello" for ::1 at 2022-09-30 11:10:48 -0700
+Processing by ApplicationController#hello_world as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 233)
+
+
