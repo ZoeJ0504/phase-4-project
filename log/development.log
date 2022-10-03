@@ -36,3 +36,258 @@ Processing by ApplicationController#hello_world as HTML
 Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 233)
 
 
+Started GET "/hello" for 127.0.0.1 at 2022-09-30 11:12:24 -0700
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 333)
+
+
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20220930194114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "name" character varying, "item_type" character varying, "character_type" character varying, "gamemode" character varying, "effect" character varying, "stats" character varying, "cost" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220930194114"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-30 19:41:58.837094"], ["updated_at", "2022-09-30 19:41:58.837094"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20220930194114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "items"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220930194114"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20220930194403)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "name" character varying, "item_type" character varying, "character_type" character varying, "gamemode" character varying, "effect" character varying, "stats" character varying, "cost" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220930194403"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/hello" for 127.0.0.1 at 2022-10-01 14:10:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hello_world as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 435)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20220930194403)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "items"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220930194403"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20220930194403)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "name" character varying, "item_type" character varying, "character_type" character varying, "image" character varying, "effect" character varying, "stats" character varying, "cost" integer)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220930194403"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684398932900319020)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/items" for ::1 at 2022-10-03 08:43:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/zoemendez/Development/code/phase-4-project/app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting ')'
+...     params.permit (:item_type, :character_type, :image, :ef...
+...                              ^
+/Users/zoemendez/Development/code/phase-4-project/app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+..._type, :character_type, :image, :effect, :stats, :cost)
+...                              ^
+):
+  
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting ')'
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting ')'
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/items" for ::1 at 2022-10-03 08:44:06 -0700
+  
+SyntaxError (/Users/zoemendez/Development/code/phase-4-project/app/controllers/items_controller.rb:10: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+        render json: i  status: :created
+                        ^~~~~~~
+/Users/zoemendez/Development/code/phase-4-project/app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting ')'
+...     params.permit (:item_type, :character_type, :image, :ef...
+...                              ^
+/Users/zoemendez/Development/code/phase-4-project/app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+..._type, :character_type, :image, :effect, :stats, :cost)
+...                              ^
+):
+  
+app/controllers/items_controller.rb:10: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting ')'
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/items_controller.rb:10: syntax error, unexpected tLABEL, expecting `do' or '{' or '('
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting ')'
+app/controllers/items_controller.rb:17: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/items" for ::1 at 2022-10-03 08:46:33 -0700
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 29ms (Views: 12.5ms | ActiveRecord: 0.6ms | Allocations: 15797)
+
+
+Started POST "/items" for ::1 at 2022-10-03 08:49:36 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+“Turbo Chemtank” : {
+			“item_type” : “Mythic”,
+			“character_type” : “Tank”,
+			“effect” : “Active, Passive”,
+			“stats” : “Ability Haste, HP, Armor, MR”,
+			“cost” : 2800,
+			“img” : “https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101”
+		}
+Processing by ItemsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 133)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/items_controller.rb:17:in `items_params'
+app/controllers/items_controller.rb:9:in `create'
+Started POST "/items" for ::1 at 2022-10-03 08:49:53 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+“Turbo Chemtank” : {
+			“item_type” : “Mythic”,
+			“character_type” : “Tank”,
+			“effect” : “Active, Passive”,
+			“stats” : “Ability Haste, HP, Armor, MR”,
+			“cost” : 2800,
+			“image” : “https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101”
+		}
+Processing by ItemsController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 117)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/items_controller.rb:17:in `items_params'
+app/controllers/items_controller.rb:9:in `create'
+Started POST "/items" for ::1 at 2022-10-03 08:50:15 -0700
+Processing by ItemsController#create as */*
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mItem Create (2.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "item_type", "character_type", "image", "effect", "stats", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", nil], ["item_type", nil], ["character_type", nil], ["image", nil], ["effect", nil], ["stats", nil], ["cost", nil]]
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 62ms (Views: 12.2ms | ActiveRecord: 7.5ms | Allocations: 20262)
+
+
+Started POST "/items" for ::1 at 2022-10-03 08:50:50 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+“Turbo Chemtank” : {
+			“item_type” : “Mythic”,
+			“character_type” : “Tank”,
+			“effect” : “Active, Passive”,
+			“stats” : “Ability Haste, HP, Armor, MR”,
+			“cost” : 2800,
+			“image” : “https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101”
+		}
+Processing by ItemsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 114)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/items_controller.rb:17:in `items_params'
+app/controllers/items_controller.rb:9:in `create'
+Started POST "/items" for ::1 at 2022-10-03 08:53:20 -0700
+Processing by ItemsController#create as */*
+  Parameters: {"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800, "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "item"=>{"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800}}
+[31mUnpermitted parameters: :name, :item. Context: { controller: ItemsController, action: create, request: #<ActionDispatch::Request:0x00007fe4b2aec178>, params: {"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800, "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "controller"=>"items", "action"=>"create", "item"=>{"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "item_type", "character_type", "image", "effect", "stats", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", nil], ["item_type", "Mythic"], ["character_type", "Tank"], ["image", "https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101"], ["effect", "Active, Passive"], ["stats", "Ability Haste, HP, Armor, MR"], ["cost", 2800]]
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 14ms (Views: 1.2ms | ActiveRecord: 3.0ms | Allocations: 2078)
+
+
+Started POST "/items" for ::1 at 2022-10-03 08:54:54 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+"Turbo Chemtank" : {
+			"item_type" : "Mythic",
+			"character_type" : "Tank",
+			"effect" : "Active, Passive",
+			"stats" : "Ability Haste, HP, Armor, MR",
+			"cost" : 2800,
+			"image" : "https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101"
+		}
+Processing by ItemsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/items_controller.rb:17:in `items_params'
+app/controllers/items_controller.rb:9:in `create'
+Started POST "/items" for ::1 at 2022-10-03 08:55:04 -0700
+Processing by ItemsController#create as */*
+  Parameters: {"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800, "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "item"=>{"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800}}
+[31mUnpermitted parameter: :item. Context: { controller: ItemsController, action: create, request: #<ActionDispatch::Request:0x00007fe4ac55eb30>, params: {"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800, "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "controller"=>"items", "action"=>"create", "item"=>{"name"=>"Turbo Chemtank", "item_type"=>"Mythic", "character_type"=>"Tank", "image"=>"https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101", "effect"=>"Active, Passive", "stats"=>"Ability Haste, HP, Armor, MR", "cost"=>2800}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "item_type", "character_type", "image", "effect", "stats", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Turbo Chemtank"], ["item_type", "Mythic"], ["character_type", "Tank"], ["image", "https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Turbo_Chemtank_item.png/revision/latest/scale-to-width-down/40?cb=20201029212101"], ["effect", "Active, Passive"], ["stats", "Ability Haste, HP, Armor, MR"], ["cost", 2800]]
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 12ms (Views: 1.8ms | ActiveRecord: 5.2ms | Allocations: 3920)
+
+
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
