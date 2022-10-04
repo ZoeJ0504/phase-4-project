@@ -1,20 +1,22 @@
 
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Game from './pages/Game';
+import Login from './pages/Login';
 
-import { useState, useEffect } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
 
   return (
     <div className="App">
-      <h1>Page Count: {count}</h1>
+      Hello!
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
   );
 }
