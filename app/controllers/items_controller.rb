@@ -10,6 +10,16 @@ class ItemsController < ApplicationController
         render json: i,  status: :created
     end
 
+    def update
+        i = Item.find(params[:id])
+        item = i.update(:image => params[:image])
+        render json: item
+    end
+
+    def show
+        i = Item.find(params[:id])
+        render json: i 
+    end
 
     private 
 
